@@ -1,19 +1,26 @@
 package ru.ikbo1319.experement;
 
+import java.lang.*;
+
 public class Dog {
     private int age;
     private String name;
 
-    public Dog(int age, String name){
-        this.age = age;
-        this.name = name;
+    public Dog(int a, String n){
+        age = a;
+        name = n;
     }
 
-    public int getAge() {
+    public Dog(String n){
+        name = n;
+        age = 0;
+    }
+
+    public int getAge(int age) {
         return age;
     }
 
-    public String getName() {
+    public String getName(String name) {
         return name;
     }
 
@@ -27,13 +34,11 @@ public class Dog {
 
     @Override
     public String toString() {
-        return "Dog{" +
-                "age=" + age +
-                ", name='" + name + '\'' +
-                '}';
+        return "Dog{" + "age=" + this.age + ", name='" + this.name + '\'' + '}';
     }
 
     public void humanAge(){
-        System.out.print(name+ "в человеческом мире был(а) бы " + age*7 + "возраста");
+        System.out.println(name+"'s age in human years is "+age*7+" years");
     }
+
 }

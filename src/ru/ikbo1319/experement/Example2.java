@@ -29,15 +29,28 @@ public class Example2 {
 
 
 
+
+
+
         /*for(int i = 0; i < 5; i++) {                  // второе задание
             System.out.print(args[i]);
         }*/
 
 
 
+
+
+
+
+
         /*for(int i = 1; i < 15; i++){                    // третье задание
             System.out.printf(" %.2f", 1.0 / i);
         }*/
+
+
+
+
+
 
 
 
@@ -70,21 +83,10 @@ public class Example2 {
         }*/
 
 
+
+
+
         // System.out.println(myFactorial(5));      // пятое задание
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     }

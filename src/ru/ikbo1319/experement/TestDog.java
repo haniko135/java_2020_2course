@@ -1,13 +1,18 @@
 package ru.ikbo1319.experement;
 
+import java.util.Scanner;
+
 public class TestDog {
     public static void main (String[] args){
-        Dog male = new Dog(7, "Zakhar");
-        Dog female = new Dog(4, "Masha");
-        Dog child = new Dog(1, "Puppy") ;
-        male.setAge(8);
-        System.out.println(child);
-        female.humanAge();
-        child.setName("Maloy");
+        Scanner scanner = new Scanner(System.in);
+        Dog[] puppies = new Dog [3];
+        for(int i = 0; i < 3; i++){
+            int num = scanner.nextInt();
+            String nam = scanner.nextLine();
+            puppies[i] = new Dog(num, nam);
+        }
+        for(int i = 0; i < 3; i++){
+            System.out.println(puppies[i]);
+        }
     }
 }
