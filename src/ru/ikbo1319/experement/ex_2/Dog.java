@@ -1,4 +1,4 @@
-package ru.ikbo1319.experement;
+package ru.ikbo1319.experement.ex_2;
 
 import java.lang.*;
 

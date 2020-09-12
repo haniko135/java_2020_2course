@@ -1,4 +1,4 @@
-package ru.ikbo1319.experement;
+package ru.ikbo1319.experement.ex_1;
 
 import java.util.Random;
 
