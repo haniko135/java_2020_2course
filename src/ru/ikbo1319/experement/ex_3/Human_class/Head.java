@@ -64,4 +64,16 @@ public class Head extends Human{
     public void setNose(String nose) {
         this.nose = nose;
     }
+
+    @Override
+    public String toString() {
+        return "Head{" +
+                "brains='" + brains + '\'' +
+                ", eye='" + eye + '\'' +
+                ", mouth='" + mouth + '\'' +
+                ", nose='" + nose + '\'' +
+                ", ears='" + ears + '\'' +
+                ", neck='" + neck + '\'' +
+                '}';
+    }
 }
