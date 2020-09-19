@@ -74,4 +74,17 @@ public class Body extends Human{
     public void setGut(String gut) {
         this.gut = gut;
     }
+
+    @Override
+    public String toString() {
+        return "Body{" +
+                "stomach='" + stomach + '\'' +
+                ", lever='" + lever + '\'' +
+                ", lung='" + lung + '\'' +
+                ", heart='" + heart + '\'' +
+                ", kidney='" + kidney + '\'' +
+                ", spine='" + spine + '\'' +
+                ", gut='" + gut + '\'' +
+                '}';
+    }
 }

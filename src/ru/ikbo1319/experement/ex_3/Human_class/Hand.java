@@ -44,4 +44,14 @@ public class Hand extends Human {
     public void setShoulder(String shoulder) {
         this.shoulder = shoulder;
     }
+
+    @Override
+    public String toString() {
+        return "Hand{" +
+                "finger='" + finger + '\'' +
+                ", elbow='" + elbow + '\'' +
+                ", forearm='" + forearm + '\'' +
+                ", shoulder='" + shoulder + '\'' +
+                '}';
+    }
 }

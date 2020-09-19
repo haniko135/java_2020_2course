@@ -25,4 +25,12 @@ public class Leg extends Human{
     public void setFoot(String foot) {
         this.foot = foot;
     }
+
+    @Override
+    public String toString() {
+        return "Leg{" +
+                "foot='" + foot + '\'' +
+                ", fingers='" + fingers + '\'' +
+                '}';
+    }
 }

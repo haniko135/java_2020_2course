@@ -17,6 +17,9 @@ public class Human {
         this.rightLeg = rightLeg;
     }
 
+    public Human() {
+    }
+
     public Head getHead(){
         return head;
     }
