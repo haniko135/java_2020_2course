@@ -1,30 +1,41 @@
 package ru.ikbo1319.experement.ex_6;
 
-import ru.ikbo1319.experement.ex_6.Movable;
+import ru.ikbo1319.experement.ex_5.pr_2.Circle_pr_2;
 
-public class MovableCircle extends MovablePoint implements Movable{
-    private double radius;
-    private double circleX = getPointX();
-    private double circleY = getPointY();
+public class MovableCircle extends Circle_pr_2 implements Movable{
 
-    public MovableCircle(double pointX, double pointY, double radius) {
-        super(pointX, pointY);
-        this.radius = radius;
+    MovablePoint circleCenter;
+
+    public MovableCircle(String border_color, boolean filled_color, double radius, double x, double y) {
+        super(border_color, filled_color, radius);
+        this.circleCenter = new MovablePoint(x,y);
     }
 
-    public double getRadius() {
-        return radius;
+    public void setCenterX(double x){
+        this.circleCenter.setPointX(x);
     }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
+    public double getCenterX(){
+        return circleCenter.getPointX();
+    }
+
+    public void setCenterY(double y){
+        this.circleCenter.setPointY(y);
+    }
+
+    public double getCenterY(){
+        return circleCenter.getPointY();
+    }
+
+    @Override
+    public String toString() {
+        return "MovableCircle{" +
+                "circleCenter=" + circleCenter +
+                '}';
     }
 
     @Override
     public void move(double x, double y) {
-        circleX += x;
-        circleY += y;
-        //добавить перемещение радиуса вместе с этой центральной точкой
-        //принять во внимание задание кординат центра с помощью уравнений
+        circleCenter.move(x,y);
     }
 }
