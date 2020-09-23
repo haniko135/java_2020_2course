@@ -1,4 +1,4 @@
-package ru.ikbo1319.experement.ex_7;
+package ru.ikbo1319.experement.ex_7.pr_1;
 
 public abstract class Dish {
     private String container;

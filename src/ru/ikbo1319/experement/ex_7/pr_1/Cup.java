@@ -1,7 +1,5 @@
 package ru.ikbo1319.experement.ex_7.pr_1;
 
-import ru.ikbo1319.experement.ex_7.Dish;
-
 public class Cup extends Dish {
     private double height;
 
