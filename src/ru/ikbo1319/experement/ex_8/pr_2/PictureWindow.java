@@ -12,6 +12,8 @@ public class PictureWindow extends JFrame {
         setVisible(true);
         Picture picture = new Picture(args[0]);
         add(picture);
+        validate();
+        repaint();
     }
 
     public static void main (String[] args){ new PictureWindow(args); }

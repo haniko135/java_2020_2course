@@ -7,8 +7,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class Picture extends JComponent {
-    private int width = 250;
-    private int length = 250;
+    private final int width = 50;
+    private final int length = 50;
     private Image img;
 
     Picture(String path){
@@ -21,7 +21,7 @@ public class Picture extends JComponent {
         }
     }
 
-    public void drawIcon(Graphics g) {
+    public void paintComponent(Graphics g) {
         g.drawImage(img, width, length, this);
     }
 }

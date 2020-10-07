@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class Animation extends JFrame {
-    private String path = "/Users/Бабушка/IdeaProjects/untitled1/src/ru/ikbo1319/experement/ex_8/pr_2/";
+    private static String path = "/Users/Бабушка/IdeaProjects/untitled1/src/ru/ikbo1319/experement/ex_8/pr_2/";
     String frames[] = {"1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"};
     private static String firstFrame = "/Users/Бабушка/IdeaProjects/untitled1/src/ru/ikbo1319/experement/ex_8/pr_2/1.jpg";
     JFrame jf;
@@ -34,8 +34,6 @@ public class Animation extends JFrame {
         jf.setVisible(true);
         jf.setLayout(new BorderLayout());
         jf.setSize(700, 700);
-
-
         jf.add(new AnimationPanel());
         jf.pack();
         animate();
@@ -44,14 +42,15 @@ public class Animation extends JFrame {
     public static class AnimationPanel extends JPanel{
         private Image image;
 
-        public void loadImage(Graphics g){
+        public void paintComponent(Graphics g){
             Graphics2D g2 = (Graphics2D) g;
             try{
-                image = ImageIO.read(new File(firstFrame));
+                File file = new File(firstFrame);
+                image = ImageIO.read(file);
             } catch (IOException e){
                 e.printStackTrace();
             }
-            g2.drawImage(image, 500, 500, this);
+            g2.drawImage(image, 50, 50, this);
         }
     }
 
