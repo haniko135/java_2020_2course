@@ -3,17 +3,13 @@ package ru.ikbo1319.experement.ex_10;
 import java.util.Scanner;
 
 public class Numbers {
-    private int sum = 0;
-    private int krazr = 0;
-    private int scount = 0;
-    private int a;
-    private int b;
-    private int index = (int) Math.pow(10.0, krazr-1);
     private Scanner scanner = new Scanner(System.in);
 
     public void Numbers_1(){
-        krazr = scanner.nextInt();
-        sum = scanner.nextInt();
+        int scount = 0;
+        int krazr = scanner.nextInt();
+        int sum = scanner.nextInt();
+        int index = (int) Math.pow(10.0, krazr-1);
         while (index < Math.pow(10, krazr)){
             int ssum = 0;
             int num = index;
@@ -31,39 +27,41 @@ public class Numbers {
         System.out.println(scount);
     }
 
-    public int Numbers_2(int a, int b){
-        a = scanner.nextInt();
-        b = scanner.nextInt();
+
+    public void Numbers_2(){
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+        Numbers_2_1(a,b);
+    }
+    public int Numbers_2_1(int a, int b){
         if (a > b+1){
             return 0;
         }
         if (a==0 || b==0) {
             return 1;
         }
-        return (Numbers_2(a,b-1) + Numbers_2(a-1,b-1));
+        return (Numbers_2_1(a,b-1) + Numbers_2_1(a-1,b-1));
     }
 
     public void Numbers_3(){
-        a = scanner.nextInt();
-        Numbers_3_1(a);
+        int N = scanner.nextInt();
+        Numbers_3_1(N);
     }
 
     public int Numbers_3_1(int a){
-        int s = 0;
-        if(a != 0){
-            s = a % 10;
-            System.out.print(s);
-        }
-        return Numbers_3_1(a /= 10);
+        System.out.print(a % 10);
+        if(a / 10 != 0)
+            return Numbers_3_1(a / 10);
+        return 0;
     }
 
     Numbers(){
         Numbers_1();
-        Numbers_2(a, b);
+        Numbers_2();
         Numbers_3();
     }
 
-    public static void main(){
+    public static void main(String[] args){
         new Numbers();
     }
 }
