@@ -7,8 +7,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class Animation extends JFrame {
-    private static String path = "/Users/Бабушка/IdeaProjects/untitled1/src/ru/ikbo1319/experement/ex_8/pr_2/";
-    String frames[] = {"1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"};
+    private static final String path = "/Users/Бабушка/IdeaProjects/untitled1/src/ru/ikbo1319/experement/ex_8/pr_2/";
+    String[] frames = {"1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg"};
     private static String firstFrame = "/Users/Бабушка/IdeaProjects/untitled1/src/ru/ikbo1319/experement/ex_8/pr_2/1.jpg";
     JFrame jf;
 
@@ -20,7 +20,8 @@ public class Animation extends JFrame {
             System.out.println(i);
             try {
 
-            } catch (Exception exc) {
+            }
+            catch (Exception exc) {
                 exc.printStackTrace();
             }
             jf.repaint();
@@ -47,7 +48,8 @@ public class Animation extends JFrame {
             try{
                 File file = new File(firstFrame);
                 image = ImageIO.read(file);
-            } catch (IOException e){
+            }
+            catch (IOException e){
                 e.printStackTrace();
             }
             g2.drawImage(image, 50, 50, this);
