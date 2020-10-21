@@ -1,12 +1,22 @@
 package ru.ikbo1319.experement.ex_13;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class StudentTest {
-    private Scanner scanner = new Scanner(System.in);
+    public static final Comparator<Student>STUDENT_ID_COMPARATOR = new Comparator<Student>() {
+        @Override
+        public int compare(Student o1, Student o2) {
+            return o2.getiDNumber() - o1.getiDNumber();
+        }
+    };
+
 
     StudentTest(){
+        Scanner scanner = new Scanner(System.in);
         int IDStudent = 0;
         double[] marksStudent = new double[0];
         String nameStudent;
@@ -29,6 +39,15 @@ public class StudentTest {
             IDStudent++;
             students.add(new Student(nameStudent, gradeStudent,marksStudent,IDStudent));
         }
+
+        //сортировка по IDNumber
+        Collections.sort(students,StudentTest.STUDENT_ID_COMPARATOR);
+        System.out.println("There is a sorted list of students:");
+        for (int i = 0; i < n;i++){
+            System.out.println(students.get(i));
+        }
+
+        Collections.sort(students,SortingStudentsByGPA.compare());
     }
 
     public static void main(String[] args){

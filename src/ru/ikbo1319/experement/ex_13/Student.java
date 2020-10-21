@@ -1,16 +1,19 @@
 package ru.ikbo1319.experement.ex_13;
 
-public class Student {
+import java.util.Arrays;
+
+public class Student{
     private String name;
     private int grade;
     private double[] marks;
-    private int ID;
+    private int iDNumber;
+    private double marksGPA;
 
-    public Student(String name, int grade, double[] marks, int ID) {
+    public Student(String name, int grade, double[] marks, int iDNumber) {
         this.name = name;
         this.grade = grade;
         this.marks = marks;
-        this.ID = ID;
+        this.iDNumber = iDNumber;
     }
 
     public String getName() {
@@ -39,11 +42,37 @@ public class Student {
         }
     }
 
-    public int getID() {
-        return ID;
+    public int getiDNumber() {
+        return iDNumber;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setiDNumber(int iDNumber) {
+        this.iDNumber = iDNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", grade=" + grade +
+                ", marks=" + Arrays.toString(marks) +
+                ", ID=" + iDNumber +
+                '}';
+    }
+
+    public double funcMarksGPA(){
+        double marksSum = 0;
+        for (int i = 0; i < marks.length; i++){
+            marksSum += marks[i];
+        }
+        return marksSum / marks.length;
+    }
+
+    public void setMarksGPA(double marksGPA){
+        this.marksGPA = funcMarksGPA();
+    }
+
+    public double getMarksGPA() {
+        return marksGPA;
     }
 }
