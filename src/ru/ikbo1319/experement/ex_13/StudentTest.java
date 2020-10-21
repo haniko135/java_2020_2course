@@ -47,7 +47,8 @@ public class StudentTest {
             System.out.println(students.get(i));
         }
 
-        //Collections.sort(students,SortingStudentsByGPA.compare());
+        //сортировка по MarksGPA
+        Collections.sort(students,SortingStudentsByGPA.STUDENT_MARKSGPA_COMPARATOR);
     }
 
     public static void main(String[] args){

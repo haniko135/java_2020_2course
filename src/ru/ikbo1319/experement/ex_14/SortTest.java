@@ -70,30 +70,33 @@ public class SortTest {
             quickSort(array, i, right);
     }
 
-    public static int binarySearch(int[]array, int key){
-        int leftBound = 0;
-        int rightBound = array.length;
-        int index = -1;
-        while (true) {
-            if (array[(rightBound + leftBound) / 2] == key) {
-                index = (rightBound + leftBound)/2;
-                break;
+    public static void binarySearch(int[]array, int key){
+        int l = 0;
+        int r = array.length;
+        int mid;
+        while (l < r) {
+            mid = (l + r) / 2;
+            if (array[mid] > key){
+                r = mid;
             }
-            else if (rightBound == leftBound) {
-                break;
-            }
-            else if (array[(rightBound + leftBound) / 2] < key) {
-                leftBound = (rightBound + leftBound) / 2;
-            }
-            else if (array[(rightBound + leftBound) / 2] > key) {
-                rightBound = (rightBound + leftBound) / 2;
-            }
+            else l = mid + 1;
         }
-        return index;
+        r--;
+        if (array[r] == key) {
+            System.out.println("We found your key! :) " + key);
+        }
+        else {
+            System.out.println("We can't found your key. :( ");
+        }
+
     }
 
 
     public static void main(String[] args){
+        long m = System.currentTimeMillis();
+        System.out.println((double) (System.currentTimeMillis() - m));
+
+
         int[] arr1 = {134, 14, 0, 78, 89, 77, 657, 190, 2, 2, 56, 83};
         int[] resultMerge = mergeSort(arr1);
         System.out.println("Mergesort:");
@@ -128,16 +131,12 @@ public class SortTest {
             System.out.println("Number " + poisk + " was not found");
         }
 
-
-        System.out.println(" ");
         System.out.println("Binary search:");
 
         int[] arr4 = {55,23,22,7,799,1 ,12,12,23,63,13,73};
         int key = 7;
         quickSort(arr4,0,arr4.length - 1);
-        int resultBinary = binarySearch(arr4,key);
-        System.out.println(resultBinary);
-
+        binarySearch(arr4,key);
 
     }
 }
