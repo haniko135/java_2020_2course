@@ -10,7 +10,7 @@ public class SortingStudentsByGPA implements Comparator{
     }
 
     @Override
-    public static int compare(Student p1, Student p2) {
+    public int compare(Student p1, Student p2) {
         if (p2.getMarksGPA() > p1.getMarksGPA())
             return 1;
         else if (p1.getMarksGPA() > p2.getMarksGPA())

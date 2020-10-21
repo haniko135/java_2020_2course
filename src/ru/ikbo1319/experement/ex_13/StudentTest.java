@@ -47,7 +47,7 @@ public class StudentTest {
             System.out.println(students.get(i));
         }
 
-        Collections.sort(students,SortingStudentsByGPA.compare());
+        //Collections.sort(students,SortingStudentsByGPA.compare());
     }
 
     public static void main(String[] args){
