@@ -45,7 +45,7 @@ public class Integer {
                 return i;
             }
         }
-        return -1;
+        return 0;
     }
 
     public double middle(){
@@ -77,4 +77,3 @@ public class Integer {
     }
 
 }
-;
