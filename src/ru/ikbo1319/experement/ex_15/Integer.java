@@ -75,5 +75,4 @@ public class Integer {
         }
         return min;
     }
-
 }
