@@ -1,4 +1,4 @@
-package ru.ikbo1319.experement.ex_22;
+package ru.ikbo1319.experement.ex_22.pr_2;
 
 import ru.ikbo1319.experement.ex_13.Student;
 
