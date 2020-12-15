@@ -1,4 +1,4 @@
-package ru.ikbo1319.experement.ex_22;
+package ru.ikbo1319.experement.ex_22.pr_1;
 
 public class InnError extends Exception {
     public InnError() {
